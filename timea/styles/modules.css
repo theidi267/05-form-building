@@ -58,6 +58,11 @@
 
   float: right;
 }
+#article-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: #ccc;
+}
 
 #article-export:after {
 
@@ -66,14 +71,11 @@
   clear: both;
 }
 
-#article-export label {
-
-  
-}
-
 #article-export input {
 
-
+  display: block;
+  width: 40%;
+  opacity: 5;
 }
 
 @media only screen and (min-width: 640px) {
@@ -99,4 +101,3 @@
   }
 
 }
-

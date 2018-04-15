@@ -1,5 +1,7 @@
 'use strict';
 
+console.log('Article View loaded')
+
 let articleView = {};
 
 articleView.populateFilters = () => {
@@ -96,18 +98,20 @@ articleView.initNewArticlePage = () => {
 };
 
 articleView.create = () => {
+
+  console.log('create going on');
   // TODO: Set up a variable to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
   $('#articles > *').remove();
 
   // TODO: Instantiate an article based on what's in the form fields:
   let aobj= {
-    title: ('#title').val(),
-    category: ('#category').val(),
-    author: ('#author').val(),
-    authorUrl: ('#authorUrl').val(),
-    publishedOn: ('#publishedOn').val(),
-    body: ('#body').val()
+    title: $('#title').val(),
+    category: $('#category').val(),
+    author: $('#author').val(),
+    authorUrl: $('#authorUrl').val(),
+    publishedOn: $('#publishedOn').val(),
+    body: $('#body').val()
   };
 
   let article = new Article(aobj);

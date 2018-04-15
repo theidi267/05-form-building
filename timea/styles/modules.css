@@ -48,20 +48,9 @@
   text-decoration: none;
 }
 
-#article-export label {
-  font-size: .8em;
-  font-style: italic;
-  color: #ccc;
-}
-
 #article-export {
 
-  float: right;
-}
-#article-export label {
-  font-size: .8em;
-  font-style: italic;
-  color: #ccc;
+  /* float: right; */
 }
 
 #article-export:after {
@@ -74,8 +63,13 @@
 #article-export input {
 
   display: block;
-  width: 40%;
+  width: 100%;
   opacity: 5;
+}
+#article-export label {
+  font-size: .8em;
+  font-style: italic;
+  color: #ccc;
 }
 
 @media only screen and (min-width: 640px) {

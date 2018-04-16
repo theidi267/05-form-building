@@ -18,7 +18,7 @@
         <header>
           <h1>{{title}}</h1>
           <div class="byline">
-            By <address><a href="{{authorUrl}}">{{author}}</a></address>
+            By<address><a href="{{authorUrl}}">{{author}}</a></address>
             {{publishStatus}}
           </div>
         </header>
@@ -28,7 +28,6 @@
     </script>
   </head>
 
-    </head>
   <body>
     <header class="site-header clearfix">
       <section class="heading-group-h1 pull-left">
@@ -57,17 +56,15 @@
            4. Author's URL
            5. Article category
            6. Some way to know if this article is a draft or is published -->
-           <form>
+           <form id="new-article">
              <input id = "title" placeholder="Title of your article" />
              <input id = "author" placeholder="Author name" />
              <input id = "authorUrl" placeholder="Authors URL" />
              <input id = "category" placeholder="Category name" />
-             <textarea id = "body"></textarea>
-             <label>
+             <textarea id = "body"></textarea>             
               <input id="publishedOn" type="checkbox">
-              <span>Published?</span>
-            </label>
-           </form>
+            <label for="publishedOn">Publish?</label>
+            </form>
       </section>
 
       <section id="articles" class="tab-content">
@@ -76,7 +73,8 @@
 
       <section id="article-export">
         <!-- TODO: Refer to the preview image to see what we will be building here: we need a container of some kind to hold a JSON export of our article. Ideally this container would show only a incipit (short preview) of the JSON and also be clickable to allow easy selection of the text it holds. What kind of element could we use for this? -->
-        <input id="aticle-json" readonly />
+        <input id="article-json" readonly value="{Json would be here}" />
+        <label>When finalized, click the above link.</label>
       </section>
 
     </main>
@@ -91,9 +89,7 @@
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
-      // TODO: We will need to call a function here to initialize the behaviors on this page, once we get them built out. Why?
-      articleView.initNewArticlePage ();
-      // (Look at the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
+      // DONE t the bottom of index.html as a reference. Since we are now using our JS on two different HTML pages that have different needs as to what parts of the code they utilize, we need to build a function that inializes each page.)
       //  Hint: Look in articleView.js for a function that does this.
 
       // COMMENT: What is this function doing? Why do we need it?
